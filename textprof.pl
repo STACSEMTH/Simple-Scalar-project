@@ -1,4 +1,4 @@
-#!/usr/intel/bin/perl
+#!/usr/bin/perl
 
 #
 # textprof - text segment profile viewer
@@ -204,3 +204,4 @@ if ($unbnd)
   }
 
 exit 0;
+

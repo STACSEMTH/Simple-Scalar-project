@@ -78,7 +78,7 @@
 ##	Windows NT version 4.0, Cygnus CygWin/32 beta 19
 ##
 CC = gcc
-OFLAGS = -O0 -g -Wall
+OFLAGS = -O3 -g -w -fpermissive -fcommon
 MFLAGS = `./sysprobe -flags`
 _MFLAGS = `../sysprobe -flags`
 MLIBS  = `./sysprobe -libs` -lm
@@ -309,7 +309,7 @@ OBJS =	main.$(OEXT) syscall.$(OEXT) memory.$(OEXT) regs.$(OEXT) \
 #
 PROGS = sim-fast$(EEXT) sim-safe$(EEXT) sim-eio$(EEXT) \
 	sim-bpred$(EEXT) sim-profile$(EEXT) \
-	sim-cache$(EEXT) sim-outorder$(EEXT) # sim-cheetah$(EEXT)
+	sim-cache$(EEXT) sim-outorder$(EEXT) sim-multicycle$(EEXT) # sim-cheetah$(EEXT)
 
 #
 # all targets, NOTE: library ordering is important...
@@ -394,6 +394,15 @@ sim-cache$(EEXT):	sysprobe$(EEXT) sim-cache.$(OEXT) cache.$(OEXT) $(OBJS) libexo
 
 sim-outorder$(EEXT):	sysprobe$(EEXT) sim-outorder.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) $(OBJS) libexo/libexo.$(LEXT)
 	$(CC) -o sim-outorder$(EEXT) $(CFLAGS) sim-outorder.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) $(OBJS) libexo/libexo.$(LEXT) $(MLIBS)
+
+sim-multicycle$(EEXT): sysprobe$(EEXT) sim-multicycle.$(OEXT) \
+                      $(OBJS) libexo/libexo.$(LEXT)
+	$(CC) -o $@ $(CFLAGS) sim-multicycle.$(OEXT) \
+	       $(OBJS) libexo/libexo.$(LEXT) $(MLIBS)
+
+sim-smt$(EEXT): sysprobe$(EEXT) sim-smt.$(OEXT) $(OBJS) libexo/libexo.$(LEXT)
+	$(CC) -o $@ $(CFLAGS) sim-smt.$(OEXT) $(OBJS) \
+	       libexo/libexo.$(LEXT) $(MLIBS)
 
 exo libexo/libexo.$(LEXT): sysprobe$(EEXT)
 	cd libexo $(CS) \

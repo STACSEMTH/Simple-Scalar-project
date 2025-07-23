@@ -400,9 +400,13 @@ sim-multicycle$(EEXT): sysprobe$(EEXT) sim-multicycle.$(OEXT) \
 	$(CC) -o $@ $(CFLAGS) sim-multicycle.$(OEXT) \
 	       $(OBJS) libexo/libexo.$(LEXT) $(MLIBS)
 
-sim-smt$(EEXT): sysprobe$(EEXT) sim-smt.$(OEXT) $(OBJS) libexo/libexo.$(LEXT)
-	$(CC) -o $@ $(CFLAGS) sim-smt.$(OEXT) $(OBJS) \
-	       libexo/libexo.$(LEXT) $(MLIBS)
+sim-smt$(EEXT): sysprobe$(EEXT) sim-smt.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) $(OBJS) libexo/libexo.$(LEXT)
+	$(CC) -o $@ $(CFLAGS) sim-smt.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) \
+	       $(OBJS) libexo/libexo.$(LEXT) $(MLIBS)
+
+sim-smt_mini$(EEXT): sysprobe$(EEXT) sim-smt_mini.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) $(OBJS) libexo/libexo.$(LEXT)
+	$(CC) -o $@ $(CFLAGS) sim-smt_mini.$(OEXT) cache.$(OEXT) bpred.$(OEXT) resource.$(OEXT) ptrace.$(OEXT) \
+	       $(OBJS) libexo/libexo.$(LEXT) $(MLIBS)
 
 exo libexo/libexo.$(LEXT): sysprobe$(EEXT)
 	cd libexo $(CS) \

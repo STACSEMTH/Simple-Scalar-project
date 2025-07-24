@@ -1,0 +1,114 @@
+sim-smt: SimpleScalar/Alpha Tool Set version 3.0 of March, 2023.
+Copyright (c) 1994-2003 by Todd M. Austin, Ph.D. and SimpleScalar, LLC.
+All Rights Reserved. This version of SimpleScalar is licensed for academic
+non-commercial use.  No portion of this work may be used by any commercial
+entity, or for any commercial purpose, without the prior written permission
+of SimpleScalar, LLC (info@simplescalar.com).
+
+warning: section `.comment' ignored...
+warning: section `.comment' ignored...
+sim: command line: ./sim-smt -threads 2 -fastfwd 0 -max:inst 5000 -redir:sim debug.out tests-alpha/bin/anagram tests-alpha/inputs/words tests-alpha/outputs/anagram.out 
+
+sim: simulation started @ Fri Jul 25 01:29:23 2025, options follow:
+# -config                     # load configuration from a file
+# -dumpconfig                 # dump configuration to a file
+# -h                    false # print help message    
+# -v                    false # verbose operation     
+# -d                    false # enable debug message  
+# -i                    false # start in Dlite debugger
+-seed                       1 # random number generator seed (0 for timer seed)
+# -q                    false # initialize and terminate immediately
+# -chkpt               <null> # restore EIO trace execution from <fname>
+# -redir:sim        debug.out # redirect simulator output to file (non-interactive only)
+# -redir:prog          <null> # redirect simulated program output to file
+-nice                       0 # simulator scheduling priority
+# -threads                  2 # number of hardware threads to create
+# -fastfwd                  0 # number of insts to fast-forward before timing
+# -max:inst              5000 # maximum number of instructions to simulate
+# -smt:dynamic_partition        false # enable dynamic resource partitioning
+# -smt:stride_prefetch        false # enable stride prefetcher
+# -smt:runahead         false # enable runahead execution
+# -smt:mem_dep_pred        false # enable memory dependency prediction
+threads 2
+
+
+sim: ** simulation statistics **
+sim_cycles                     3093 # total cycles
+sim_num_insn                   5001 # instructions committed
+bp_lookups                      447 # branch predictor lookups
+bp_correct                      415 # correct branch predictions
+bp_mispred                       13 # branch mispredictions
+btb_hits                        408 # BTB hits
+btb_misses                       39 # BTB misses
+bp_accuracy                  0.9696 # branch prediction accuracy
+btb_hit_rate                 0.9128 # BTB hit rate
+overall_ipc                  1.6169 # overall IPC
+il1_hits                       4963 # IL1 cache hits
+il1_misses                      317 # IL1 cache misses
+il1_writebacks                    0 # IL1 writebacks
+il1_hit_rate                 0.9400 # IL1 hit rate
+dl1_hits                          0 # DL1 cache hits
+dl1_misses                        7 # DL1 cache misses
+dl1_writebacks                    0 # DL1 writebacks
+dl1_hit_rate                 0.0000 # DL1 hit rate
+dl2_hits                          0 # DL2 cache hits
+dl2_misses                      157 # DL2 cache misses
+dl2_writebacks                    0 # DL2 writebacks
+dl2_hit_rate                 0.0000 # DL2 hit rate
+bus_transactions                 23 # bus transactions
+coherence_misses                  0 # coherence misses
+invalidations                     0 # cache invalidations
+prefetches_issued                 0 # prefetches issued
+prefetches_useful                 0 # useful prefetches
+prefetch_accuracy      <error: divide by zero> # prefetch accuracy
+exceptions_detected               0 # exceptions detected
+precise_exceptions                0 # precise exceptions
+lsq_store_forwards                2 # store-to-load forwards
+lsq_load_violations               2 # load-store violations
+lsq_addr_conflicts                0 # address conflicts
+lsq_partial_forwards              0 # partial forwards
+fetch_ifq_full                   60 # fetch stalls (IFQ full)
+rename_rob_full                   0 # rename stalls (ROB full)
+rename_iq_full                   75 # rename stalls (IQ full)
+rename_lsq_full                   0 # rename stalls (LSQ full)
+issue_iq_empty                  111 # issue stalls (IQ empty)
+sim_num_insn_t0                2501 # commits, thread 0
+IPC_t0                       0.8086 # IPC, thread 0
+flush_count_t0                   14 # Pipeline flushes, thread 0
+il1_hits_t0                    2490 # IL1 hits, thread 0
+il1_misses_t0                   152 # IL1 misses, thread 0
+dl1_hits_t0                       0 # DL1 hits, thread 0
+dl1_misses_t0                     3 # DL1 misses, thread 0
+dl2_hits_t0                       0 # DL2 hits, thread 0
+dl2_misses_t0                   147 # DL2 misses, thread 0
+itlb_hits_t0                   3028 # ITLB hits, thread 0
+itlb_misses_t0                    5 # ITLB misses, thread 0
+dtlb_hits_t0                     22 # DTLB hits, thread 0
+dtlb_misses_t0                    6 # DTLB misses, thread 0
+il1_hit_rate_t0              0.9425 # IL1 hit rate, thread 0
+dl1_hit_rate_t0              0.0000 # DL1 hit rate, thread 0
+itlb_hit_rate_t0             0.9984 # ITLB hit rate, thread 0
+dtlb_hit_rate_t0             0.7857 # DTLB hit rate, thread 0
+sim_num_insn_t1                2500 # commits, thread 1
+IPC_t1                       0.8083 # IPC, thread 1
+flush_count_t1                    1 # Pipeline flushes, thread 1
+il1_hits_t1                    2473 # IL1 hits, thread 1
+il1_misses_t1                   165 # IL1 misses, thread 1
+dl1_hits_t1                       0 # DL1 hits, thread 1
+dl1_misses_t1                     4 # DL1 misses, thread 1
+dl2_hits_t1                       0 # DL2 hits, thread 1
+dl2_misses_t1                    10 # DL2 misses, thread 1
+itlb_hits_t1                   3029 # ITLB hits, thread 1
+itlb_misses_t1                    4 # ITLB misses, thread 1
+dtlb_hits_t1                     24 # DTLB hits, thread 1
+dtlb_misses_t1                    5 # DTLB misses, thread 1
+il1_hit_rate_t1              0.9375 # IL1 hit rate, thread 1
+dl1_hit_rate_t1              0.0000 # DL1 hit rate, thread 1
+itlb_hit_rate_t1             0.9987 # ITLB hit rate, thread 1
+dtlb_hit_rate_t1             0.8276 # DTLB hit rate, thread 1
+mem.page_count                   17 # total number of pages allocated
+mem.page_mem                   136k # total size of memory pages allocated
+mem.ptab_misses               19478 # total first level page table misses
+mem.ptab_accesses            475344 # total page table accesses
+mem.ptab_miss_rate           0.0410 # first level page table miss rate
+

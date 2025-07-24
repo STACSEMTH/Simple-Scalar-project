@@ -58,6 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "misc.h": "c",
-    "options.h": "c"
+    "options.h": "c",
+    "stats.h": "c"
   }
 }

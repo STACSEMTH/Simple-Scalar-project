@@ -59,6 +59,7 @@
   "files.associations": {
     "misc.h": "c",
     "options.h": "c",
-    "stats.h": "c"
+    "stats.h": "c",
+    "stdint.h": "c"
   }
 }

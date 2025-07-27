@@ -9,7 +9,7 @@ warning: section `.comment' ignored...
 warning: section `.comment' ignored...
 sim: command line: ./sim-smt -threads 2 -fastfwd 0 -max:inst 5000 -redir:sim debug.out tests-alpha/bin/anagram tests-alpha/inputs/words tests-alpha/outputs/anagram.out 
 
-sim: simulation started @ Fri Jul 25 01:29:23 2025, options follow:
+sim: simulation started @ Sun Jul 27 03:41:07 2025, options follow:
 # -config                     # load configuration from a file
 # -dumpconfig                 # dump configuration to a file
 # -h                    false # print help message    
@@ -33,29 +33,54 @@ threads 2
 
 
 sim: ** simulation statistics **
-sim_cycles                     3093 # total cycles
-sim_num_insn                   5001 # instructions committed
-bp_lookups                      447 # branch predictor lookups
-bp_correct                      415 # correct branch predictions
-bp_mispred                       13 # branch mispredictions
-btb_hits                        408 # BTB hits
-btb_misses                       39 # BTB misses
-bp_accuracy                  0.9696 # branch prediction accuracy
-btb_hit_rate                 0.9128 # BTB hit rate
-overall_ipc                  1.6169 # overall IPC
-il1_hits                       4963 # IL1 cache hits
-il1_misses                      317 # IL1 cache misses
+sim_cycles                   150200 # total cycles
+sim_num_insn                      0 # instructions committed
+bp_lookups                        4 # branch predictor lookups
+bp_correct                        0 # correct branch predictions
+bp_mispred                        0 # branch mispredictions
+btb_hits                          1 # BTB hits
+btb_misses                        1 # BTB misses
+bp_accuracy            <error: divide by zero> # branch prediction accuracy
+btb_hit_rate                 0.5000 # BTB hit rate
+overall_ipc                  0.0000 # overall IPC
+conditional_branches              0 # conditional branches
+unconditional_branches            2 # unconditional branches
+function_calls                    0 # function calls
+function_returns                  0 # function returns
+ras_hits                          0 # RAS hits
+ras_misses                        0 # RAS misses
+local_correct                     0 # local predictor correct
+local_wrong                       0 # local predictor wrong
+gshare_correct                    0 # gshare predictor correct
+gshare_wrong                      0 # gshare predictor wrong
+local_accuracy         <error: divide by zero> # local predictor accuracy
+gshare_accuracy        <error: divide by zero> # gshare predictor accuracy
+ras_hit_rate           <error: divide by zero> # RAS hit rate
+dynamic_priority_t0          0.0000 # Dynamic priority, thread 0
+resource_efficiency_t0       0.0000 # Resource efficiency, thread 0
+fairness_score_t0            0.0000 # Fairness score, thread 0
+dynamic_priority_t1          0.0000 # Dynamic priority, thread 1
+resource_efficiency_t1       0.0000 # Resource efficiency, thread 1
+fairness_score_t1            0.0000 # Fairness score, thread 1
+dtlb_hits                         0 # DTLB hits
+dtlb_misses                       0 # DTLB misses
+dtlb_hit_rate                0.0000 # DTLB hit rate
+itlb_hits                         6 # ITLB hits
+itlb_misses                       2 # ITLB misses
+itlb_hit_rate                0.7500 # ITLB hit rate
+il1_hits                          6 # IL1 cache hits
+il1_misses                        2 # IL1 cache misses
 il1_writebacks                    0 # IL1 writebacks
-il1_hit_rate                 0.9400 # IL1 hit rate
+il1_hit_rate                 0.7500 # IL1 hit rate
 dl1_hits                          0 # DL1 cache hits
-dl1_misses                        7 # DL1 cache misses
+dl1_misses                        0 # DL1 cache misses
 dl1_writebacks                    0 # DL1 writebacks
 dl1_hit_rate                 0.0000 # DL1 hit rate
 dl2_hits                          0 # DL2 cache hits
-dl2_misses                      157 # DL2 cache misses
+dl2_misses                        2 # DL2 cache misses
 dl2_writebacks                    0 # DL2 writebacks
 dl2_hit_rate                 0.0000 # DL2 hit rate
-bus_transactions                 23 # bus transactions
+bus_transactions                  0 # bus transactions
 coherence_misses                  0 # coherence misses
 invalidations                     0 # cache invalidations
 prefetches_issued                 0 # prefetches issued
@@ -63,52 +88,69 @@ prefetches_useful                 0 # useful prefetches
 prefetch_accuracy      <error: divide by zero> # prefetch accuracy
 exceptions_detected               0 # exceptions detected
 precise_exceptions                0 # precise exceptions
-lsq_store_forwards                2 # store-to-load forwards
-lsq_load_violations               2 # load-store violations
+lsq_store_forwards                0 # store-to-load forwards
+lsq_load_violations               0 # load-store violations
 lsq_addr_conflicts                0 # address conflicts
 lsq_partial_forwards              0 # partial forwards
-fetch_ifq_full                   60 # fetch stalls (IFQ full)
+fetch_ifq_full                    0 # fetch stalls (IFQ full)
 rename_rob_full                   0 # rename stalls (ROB full)
-rename_iq_full                   75 # rename stalls (IQ full)
+rename_iq_full                    0 # rename stalls (IQ full)
 rename_lsq_full                   0 # rename stalls (LSQ full)
-issue_iq_empty                  111 # issue stalls (IQ empty)
-sim_num_insn_t0                2501 # commits, thread 0
-IPC_t0                       0.8086 # IPC, thread 0
-flush_count_t0                   14 # Pipeline flushes, thread 0
-il1_hits_t0                    2490 # IL1 hits, thread 0
-il1_misses_t0                   152 # IL1 misses, thread 0
+issue_iq_empty               100096 # issue stalls (IQ empty)
+sim_num_insn_t0                   0 # commits, thread 0
+IPC_t0                       0.0000 # IPC, thread 0
+flush_count_t0                    4 # Pipeline flushes, thread 0
+il1_hits_t0                       3 # IL1 hits, thread 0
+il1_misses_t0                     1 # IL1 misses, thread 0
 dl1_hits_t0                       0 # DL1 hits, thread 0
-dl1_misses_t0                     3 # DL1 misses, thread 0
+dl1_misses_t0                     0 # DL1 misses, thread 0
 dl2_hits_t0                       0 # DL2 hits, thread 0
-dl2_misses_t0                   147 # DL2 misses, thread 0
-itlb_hits_t0                   3028 # ITLB hits, thread 0
-itlb_misses_t0                    5 # ITLB misses, thread 0
-dtlb_hits_t0                     22 # DTLB hits, thread 0
-dtlb_misses_t0                    6 # DTLB misses, thread 0
-il1_hit_rate_t0              0.9425 # IL1 hit rate, thread 0
+dl2_misses_t0                     1 # DL2 misses, thread 0
+itlb_hits_t0                      3 # ITLB hits, thread 0
+itlb_misses_t0                    1 # ITLB misses, thread 0
+dtlb_hits_t0                      0 # DTLB hits, thread 0
+dtlb_misses_t0                    0 # DTLB misses, thread 0
+il1_hit_rate_t0              0.7500 # IL1 hit rate, thread 0
 dl1_hit_rate_t0              0.0000 # DL1 hit rate, thread 0
-itlb_hit_rate_t0             0.9984 # ITLB hit rate, thread 0
-dtlb_hit_rate_t0             0.7857 # DTLB hit rate, thread 0
-sim_num_insn_t1                2500 # commits, thread 1
-IPC_t1                       0.8083 # IPC, thread 1
-flush_count_t1                    1 # Pipeline flushes, thread 1
-il1_hits_t1                    2473 # IL1 hits, thread 1
-il1_misses_t1                   165 # IL1 misses, thread 1
+itlb_hit_rate_t0             0.7500 # ITLB hit rate, thread 0
+dtlb_hit_rate_t0             0.0000 # DTLB hit rate, thread 0
+sim_num_insn_t1                   0 # commits, thread 1
+IPC_t1                       0.0000 # IPC, thread 1
+flush_count_t1                    4 # Pipeline flushes, thread 1
+il1_hits_t1                       3 # IL1 hits, thread 1
+il1_misses_t1                     1 # IL1 misses, thread 1
 dl1_hits_t1                       0 # DL1 hits, thread 1
-dl1_misses_t1                     4 # DL1 misses, thread 1
+dl1_misses_t1                     0 # DL1 misses, thread 1
 dl2_hits_t1                       0 # DL2 hits, thread 1
-dl2_misses_t1                    10 # DL2 misses, thread 1
-itlb_hits_t1                   3029 # ITLB hits, thread 1
-itlb_misses_t1                    4 # ITLB misses, thread 1
-dtlb_hits_t1                     24 # DTLB hits, thread 1
-dtlb_misses_t1                    5 # DTLB misses, thread 1
-il1_hit_rate_t1              0.9375 # IL1 hit rate, thread 1
+dl2_misses_t1                     1 # DL2 misses, thread 1
+itlb_hits_t1                      3 # ITLB hits, thread 1
+itlb_misses_t1                    1 # ITLB misses, thread 1
+dtlb_hits_t1                      0 # DTLB hits, thread 1
+dtlb_misses_t1                    0 # DTLB misses, thread 1
+il1_hit_rate_t1              0.7500 # IL1 hit rate, thread 1
 dl1_hit_rate_t1              0.0000 # DL1 hit rate, thread 1
-itlb_hit_rate_t1             0.9987 # ITLB hit rate, thread 1
-dtlb_hit_rate_t1             0.8276 # DTLB hit rate, thread 1
+itlb_hit_rate_t1             0.7500 # ITLB hit rate, thread 1
+dtlb_hit_rate_t1             0.0000 # DTLB hit rate, thread 1
+fetch_ifq_full_t0                 0 # fetch stalls (IFQ full), thread 0
+rename_rob_full_t0                0 # rename stalls (ROB full), thread 0
+lsq_store_forwards_t0             0 # store-to-load forwards, thread 0
+bp_lookups_t0                     2 # branch predictor lookups, thread 0
+bp_correct_t0                     0 # correct branch predictions, thread 0
+bp_correct_t0 / (bp_correct_t0 + bp_mispred_t0) <error: divide by zero> # branch prediction accuracy, thread 0
+bp_mispred_t0                     0 # branch mispredictions, thread 0
+recent_ipc_t0                0.0000 # recent IPC, thread 0
+fetch_ifq_full_t1                 0 # fetch stalls (IFQ full), thread 1
+rename_rob_full_t1                0 # rename stalls (ROB full), thread 1
+lsq_store_forwards_t1             0 # store-to-load forwards, thread 1
+bp_lookups_t1                     2 # branch predictor lookups, thread 1
+bp_correct_t1                     0 # correct branch predictions, thread 1
+bp_correct_t1 / (bp_correct_t1 + bp_mispred_t1) <error: divide by zero> # branch prediction accuracy, thread 1
+bp_mispred_t1                     0 # branch mispredictions, thread 1
+recent_ipc_t1                0.0000 # recent IPC, thread 1
+total_fetch_stalls           0.0000 # total fetch stalls across all threads
 mem.page_count                   17 # total number of pages allocated
 mem.page_mem                   136k # total size of memory pages allocated
-mem.ptab_misses               19478 # total first level page table misses
-mem.ptab_accesses            475344 # total page table accesses
-mem.ptab_miss_rate           0.0410 # first level page table miss rate
+mem.ptab_misses                  22 # total first level page table misses
+mem.ptab_accesses            454868 # total page table accesses
+mem.ptab_miss_rate           0.0000 # first level page table miss rate
 
